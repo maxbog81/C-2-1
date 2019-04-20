@@ -23,29 +23,21 @@ namespace MyGame
 
         public static BaseObject[] _objs;
 
-        //public static void Load()
-        //{
-        //_objs = new BaseObject[30];
-        //for (int i = 0; i < _objs.Length; i++)
-        //    _objs[i] = new BaseObject(new Point(600, i * 20), new Point(15 - i, 15 - i), new Size(20, 20));
-        //_objs = new BaseObject[30];
-        //for (int i = 0; i < _objs.Length; i++)
-        //    _objs[i] = new Star(new Point(600, i * 20), new Point(-i, 0), new Size(20, 20));
-        //}
         public static void Load()
         {
-            _objs = new BaseObject[40];
-            for (int i = 0; i < _objs.Length / 2; i++)
-                _objs[i] = new BaseObject(new Point(600, i * 20), new Point(-i, -i), new Size(8, 8));
+            _objs = new BaseObject[60];
+            //for (int i = 0; i < _objs.Length / 2; i++)
+            //    _objs[i] = new BaseObject(new Point(600, i * 20), new Point(-i, -i), new Size(8, 8));
             for (int i = _objs.Length / 2; i < _objs.Length; i++)
-                _objs[i] = new Star(new Point(600, (i-10) * 20), new Point(-i, 0), new Size(4, 4));
+                _objs[i] = new Star(new Point(800, (i - 30) * 20), new Point(-i, 0), new Size(4, 4));
             for (int i = 0; i < _objs.Length / 2; i++)
-                _objs[i] = new Star2(new Point(0, i * 20), new Point(-i, 0), new Size(3, 3));
+                _objs[i] = new Star2(new Point(800, i * 20), new Point(-i, 0), new Size(3, 3));
+
         }
-                     
+
         public static void Init(Form form)
         {
-            Timer timer = new Timer { Interval = 100 };
+            Timer timer = new Timer { Interval = 150 };
             timer.Start();
             timer.Tick += Timer_Tick;
 
