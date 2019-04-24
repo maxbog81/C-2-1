@@ -6,6 +6,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+//Богатов Максим
+
+//1. Добавить свои объекты в иерархию объектов, чтобы получился красивый задний фон, похожий на полёт в звёздном пространстве.
+//2. *Заменить кружочки картинками, используя метод DrawImage.
+
 namespace MyGame
 {
     class Program
